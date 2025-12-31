@@ -13,7 +13,7 @@ import { skills } from '@/data'
       <h2 class="text-3xl font-semibold tracking-tight text-foreground">Skills</h2>
       <div class="flex flex-wrap gap-3">
         <span 
-          v-for="(skill, index) in skills.core" 
+          v-for="(skill) in skills.core" 
           :key="skill"
           class="px-4 py-2 bg-secondary/30 border border-border/50 text-foreground/90 rounded-full text-sm font-medium tracking-wide transition-colors hover:bg-secondary/60 hover:border-foreground/10 cursor-default"
         >
@@ -31,7 +31,7 @@ import { skills } from '@/data'
       <h2 class="text-3xl font-semibold tracking-tight text-foreground">Tools</h2>
       <div class="flex flex-wrap gap-3">
         <span 
-          v-for="(tool, index) in skills.tools" 
+          v-for="(tool) in skills.tools" 
           :key="tool"
           class="px-4 py-2 bg-secondary/30 border border-border/50 text-foreground/90 rounded-full text-sm font-medium tracking-wide transition-colors hover:bg-secondary/60 hover:border-foreground/10 cursor-default"
         >

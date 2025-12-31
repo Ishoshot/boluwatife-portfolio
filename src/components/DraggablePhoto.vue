@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const el = ref<HTMLElement | null>(null)
 const x = ref(0)
 const y = ref(0)
 const isDragging = ref(false)
