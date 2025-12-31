@@ -1,7 +1,7 @@
 import { ref, readonly } from "vue";
 import { useMouse } from "@vueuse/core";
 
-const { x, y } = useMouse();
+const { x, y } = useMouse({ type: "client" });
 const cursorVariant = ref<"default" | "project">("default");
 const cursorText = ref("");
 

@@ -1,7 +1,14 @@
-import { Linkedin, Mail, FileText } from "lucide-vue-next";
+import {
+  Linkedin,
+  Mail,
+  FileText,
+  Instagram,
+  Dribbble,
+  Globe,
+} from "lucide-vue-next";
 
 export const personalInfo = {
-  name: "Onisuru Boluwatife Florence",
+  name: "Onisuru Boluwatife",
   role: "Full-Stack Product Designer",
   location: "Lagos, Nigeria",
   email: "onisuruboluwatife1@gmail.com",
@@ -13,6 +20,21 @@ export const personalInfo = {
       name: "LinkedIn",
       url: "https://linkedin.com/in/onisuru-boluwatife",
       icon: Linkedin,
+    },
+    {
+      name: "Behance",
+      url: "https://www.behance.net/boluwatonisuru",
+      icon: Globe, // Behance icon not standard in Lucide, using Globe as fallback
+    },
+    {
+      name: "Dribbble",
+      url: "https://dribbble.com/xx_teefe",
+      icon: Dribbble,
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/design_with_teefe/",
+      icon: Instagram,
     },
     {
       name: "Email",

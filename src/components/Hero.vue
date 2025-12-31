@@ -18,10 +18,17 @@ const handleCopyEmail = () => {
         v-motion
         :initial="{ opacity: 0, y: 20 }"
         :enter="{ opacity: 1, y: 0, transition: { duration: 800, ease: 'easeOut' } }"
-        class="space-y-2"
+        class="flex flex-wrap items-center gap-3"
       >
-        <h4 class="text-xl font-medium text-muted-foreground font-serif italic tracking-wide">{{ hero.greeting }}</h4>
-        <h4 class="text-xl font-medium text-foreground tracking-tight">{{ hero.intro }}</h4>
+        <div class="space-y-1">
+          <h4 class="text-xl font-medium text-muted-foreground font-serif italic tracking-wide">{{ hero.greeting }}</h4>
+          <div class="flex items-center gap-3 flex-wrap">
+            <h4 class="text-xl font-medium text-foreground tracking-tight">{{ hero.intro }}</h4>
+            <span class="px-3 py-1 bg-secondary/50 border border-border text-foreground/80 rounded-full text-xs font-medium tracking-wide uppercase">
+              {{ personalInfo.role }}
+            </span>
+          </div>
+        </div>
       </div>
       
       <h1 
@@ -33,14 +40,18 @@ const handleCopyEmail = () => {
         {{ hero.headline }}
       </h1>
       
-      <p 
+      <div 
         v-motion
         :initial="{ opacity: 0, y: 30 }"
         :enter="{ opacity: 1, y: 0, transition: { duration: 800, delay: 200, ease: 'easeOut' } }"
-        class="text-2xl text-muted-foreground max-w-2xl text-balance leading-relaxed tracking-tight"
+        class="text-2xl text-muted-foreground max-w-2xl text-balance leading-relaxed tracking-tight flex flex-wrap gap-x-3 gap-y-1 items-center"
       >
-        {{ hero.subheadline }}
-      </p>
+        <span class="text-foreground/80">Detail-oriented</span>
+        <span class="text-border">|</span>
+        <span class="text-foreground/80">Strategic</span>
+        <span class="text-border">|</span>
+        <span class="text-foreground/80">Collaboration</span>
+      </div>
 
       <div 
         v-motion

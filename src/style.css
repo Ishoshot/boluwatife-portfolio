@@ -47,3 +47,22 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
+/* Global cursor styles */
+html,
+body {
+  cursor: url("/cursor-default.svg") 0 0, auto;
+}
+
+a,
+button {
+  cursor: url("/cursor-default.svg") 0 0, auto;
+}
+
+/* Force project cursor on specific elements and their children */
+.cursor-project,
+.cursor-project *,
+.cursor-project a,
+.cursor-project button {
+  cursor: url("/cursor-project.svg") 0 0, auto !important;
+}

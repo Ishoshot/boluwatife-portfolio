@@ -1,24 +1,12 @@
 <script setup lang="ts">
-import Hero from '@/components/Hero.vue'
-import Projects from '@/components/Projects.vue'
-import Experience from '@/components/Experience.vue'
-import Skills from '@/components/Skills.vue'
-import About from '@/components/About.vue'
 import Footer from '@/components/Footer.vue'
 import CustomCursor from '@/components/CustomCursor.vue'
-import { ref, onMounted, computed } from 'vue'
+import Navbar from '@/components/Navbar.vue'
+import { computed } from 'vue'
 import { useCursor } from '@/composables/useCursor'
 
 const { cursorVariant } = useCursor()
-const isLoaded = ref(false)
 const isProjectCursor = computed(() => cursorVariant.value === 'project')
-
-onMounted(() => {
-  // Simple fade-in effect on mount
-  setTimeout(() => {
-    isLoaded.value = true
-  }, 100)
-})
 </script>
 
 <template>
@@ -27,13 +15,12 @@ onMounted(() => {
     :class="{ 'cursor-project': isProjectCursor }"
   >
     <CustomCursor />
-    <main class="transition-opacity duration-700 ease-out" :class="isLoaded ? 'opacity-100' : 'opacity-0'">
-      <Hero />
-      <Projects />
-      <Experience />
-      <About />
-      <Skills />
-    </main>
+    <Navbar />
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
     <Footer />
   </div>
 </template>
@@ -42,17 +29,16 @@ onMounted(() => {
 /* Global smooth scroll */
 html {
   scroll-behavior: smooth;
-  cursor: url('/cursor-default.svg') 0 0, auto; /* Native cursor, 0 0 hotspot */
+  scroll-padding-top: 100px;
 }
 
-a, button {
-  cursor: url('/cursor-default.svg') 0 0, auto; /* Keep default cursor for links unless overridden */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
 }
 
-/* Class to switch to project cursor */
-.cursor-project, 
-.cursor-project a, 
-.cursor-project button {
-  cursor: url('/cursor-project.svg') 0 0, auto !important;
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

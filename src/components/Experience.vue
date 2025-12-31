@@ -3,9 +3,11 @@ import { ref } from 'vue'
 import { experience, type Experience } from '@/data'
 import Modal from './Modal.vue'
 import { ArrowUpRight } from 'lucide-vue-next'
+import { useCursor } from '@/composables/useCursor'
 
 const selectedExp = ref<Experience | null>(null)
 const isModalOpen = ref(false)
+const { setCursorVariant } = useCursor()
 
 const openExperience = (exp: Experience) => {
   selectedExp.value = exp
@@ -28,11 +30,13 @@ const openExperience = (exp: Experience) => {
       <div 
         v-for="(exp, index) in experience" 
         :key="exp.company" 
-        class="group cursor-pointer relative pl-8 border-l border-border hover:border-foreground/30 transition-colors duration-500"
+        class="group cursor-project relative pl-8 border-l border-border hover:border-foreground/30 transition-colors duration-500"
         v-motion
         :initial="{ opacity: 0, x: -20 }"
         :visible="{ opacity: 1, x: 0, transition: { duration: 800, delay: index * 100, ease: 'easeOut' } }"
         @click="openExperience(exp)"
+        @mouseenter="setCursorVariant('project')"
+        @mouseleave="setCursorVariant('default')"
       >
         <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-background border border-border group-hover:border-foreground group-hover:scale-110 transition-all duration-300"></span>
         
