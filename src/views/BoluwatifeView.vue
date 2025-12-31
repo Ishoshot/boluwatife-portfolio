@@ -5,6 +5,7 @@ import { personalInfo } from '@/data'
 const title = `Portfolio Presentation | ${personalInfo.name}`
 const description = "View my detailed portfolio presentation showcasing my design process, case studies, and impact."
 const url = 'https://iamteefe.netlify.app/boluwatife'
+const ogImage = 'https://iamteefe.netlify.app/boluwatife.png'
 
 useHead({
   title,
@@ -18,11 +19,13 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
+  ogImage,
   ogUrl: url,
   ogType: 'article',
   twitterCard: 'summary_large_image',
   twitterTitle: title,
   twitterDescription: description,
+  twitterImage: ogImage,
 })
 </script>
 

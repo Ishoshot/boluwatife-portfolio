@@ -38,7 +38,7 @@ export const personalInfo = {
 };
 
 export const hero = {
-  greeting: "Hej!",
+  greeting: "Hi 👋",
   intro: "I'm Boluwatife",
   headline:
     "I translate user needs and business goals into clear, scalable design solutions.",
