@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { Menu, X } from 'lucide-vue-next'
+import cvUrl from '@/assets/Boluwatife Onisuru.pdf'
 
 const isScrolled = ref(false)
 const isOpen = ref(false)
@@ -38,6 +39,7 @@ const links = [
   { name: 'About', to: { name: 'home', hash: '#about' } },
   { name: 'Testimonials', to: { name: 'home', hash: '#testimonials' } },
   { name: 'Boluwatife', to: { name: 'boluwatife' }, target: '_blank' },
+  { name: 'Get CV', href: cvUrl, target: '_blank' },
 ]
 </script>
 
@@ -55,17 +57,27 @@ const links = [
       >
         <!-- Desktop Links -->
         <div class="hidden md:flex items-center gap-8">
-          <router-link 
-            v-for="link in links" 
-            :key="link.name" 
-            :to="link.to"
-            :target="link.target"
-            class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide relative group"
-            active-class="text-foreground"
-          >
-            {{ link.name }}
-            <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-foreground rounded-full transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100"></span>
-          </router-link>
+          <template v-for="link in links" :key="link.name">
+            <a
+              v-if="link.href"
+              :href="link.href"
+              :target="link.target"
+              class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide relative group"
+            >
+              {{ link.name }}
+              <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-foreground rounded-full transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100"></span>
+            </a>
+            <router-link 
+              v-else
+              :to="link.to!"
+              :target="link.target"
+              class="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors tracking-wide relative group"
+              active-class="text-foreground"
+            >
+              {{ link.name }}
+              <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-foreground rounded-full transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100"></span>
+            </router-link>
+          </template>
         </div>
 
         <!-- Mobile Toggle -->
@@ -102,17 +114,27 @@ const links = [
         </div>
 
         <div class="flex-1 flex flex-col items-center justify-center gap-8">
-          <router-link 
-            v-for="link in links" 
-            :key="link.name" 
-            :to="link.to"
-            :target="link.target"
-            @click="closeMenu"
-            class="text-2xl font-medium text-foreground/80 hover:text-foreground transition-colors"
-            active-class="text-foreground"
-          >
-            {{ link.name }}
-          </router-link>
+          <template v-for="link in links" :key="link.name">
+            <a
+              v-if="link.href"
+              :href="link.href"
+              :target="link.target"
+              @click="closeMenu"
+              class="text-2xl font-medium text-foreground/80 hover:text-foreground transition-colors"
+            >
+              {{ link.name }}
+            </a>
+            <router-link 
+              v-else
+              :to="link.to!"
+              :target="link.target"
+              @click="closeMenu"
+              class="text-2xl font-medium text-foreground/80 hover:text-foreground transition-colors"
+              active-class="text-foreground"
+            >
+              {{ link.name }}
+            </router-link>
+          </template>
         </div>
       </div>
     </Transition>
