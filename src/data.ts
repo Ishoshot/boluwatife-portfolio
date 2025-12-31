@@ -7,7 +7,7 @@ export const personalInfo = {
   email: "onisuruboluwatife1@gmail.com",
   phone: "+234 706 167 1646",
   summary:
-    "I’m a Full-Stack Product Designer with over 2 years of experience building digital products from discovery to delivery. I translate user needs and business goals into clear, scalable design solutions across web and mobile. My core attributes are Detail-oriented | Strategic | Collaboration.",
+    "I’m a Full-Stack Product Designer with over 2 years of experience building digital products from discovery to delivery. I translate user needs and business goals into clear & scalable design solutions across web and mobile. My core attributes are Detail-oriented | Strategic | Collaboration.",
   socials: [
     {
       name: "LinkedIn",
@@ -41,7 +41,7 @@ export const hero = {
   greeting: "Hi 👋",
   intro: "I'm Boluwatife",
   headline:
-    "I translate user needs and business goals into clear, scalable design solutions.",
+    "I translate user needs and business goals into clear & scalable design solutions.",
   subheadline: "Full-Stack Product Designer. Strategic. Detail-oriented.",
 };
 
