@@ -11,10 +11,10 @@ const firstName = personalInfo.name.split(' ')[1]
 </script>
 
 <template>
-  <section class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+  <section class="max-w-6xl mx-auto px-6 py-24 md:py-32" aria-label="About Me">
     <div class="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-24 items-start relative">
       <!-- Photo Area (Draggable) -->
-      <div class="hidden md:block relative h-[600px] pointer-events-none">
+      <div class="hidden md:block relative h-[600px] pointer-events-none" aria-hidden="true">
         <DraggablePhoto class="pointer-events-auto absolute top-10 left-10" />
       </div>
 
@@ -49,6 +49,7 @@ const firstName = personalInfo.name.split(' ')[1]
         >
           <button 
             @click="handleCopyEmail"
+            :aria-label="copied ? 'Email copied to clipboard' : 'Copy email address'"
             class="group flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full transition-all duration-300 text-base font-medium tracking-wide active:scale-95"
           >
             <div class="relative w-4 h-4">
@@ -64,6 +65,7 @@ const firstName = personalInfo.name.split(' ')[1]
             :href="social.url"
             target="_blank"
             rel="noopener noreferrer"
+            :aria-label="`Visit my ${social.name} profile`"
             class="flex items-center gap-2 px-6 py-3 border border-border hover:border-foreground/20 hover:bg-secondary/30 rounded-full transition-all duration-300 text-base font-medium tracking-wide active:scale-95"
           >
             <component :is="social.icon" class="w-4 h-4" />

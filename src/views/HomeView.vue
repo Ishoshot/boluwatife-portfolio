@@ -7,13 +7,13 @@ import About from '@/components/About.vue'
 import Testimonials from '@/components/Testimonials.vue'
 import { ref, onMounted } from 'vue'
 import { useSeoMeta, useHead } from '@unhead/vue'
-import { personalInfo, skills } from '@/data'
+import { personalInfo, skills, projects } from '@/data'
 
 const isLoaded = ref(false)
 
 // SEO Configuration
 const title = `${personalInfo.name} | ${personalInfo.role}`
-const description = personalInfo.summary
+const description = "Full-Stack Product Designer in Lagos, Nigeria. Specializing in end-to-end product design, user research, and scalable design solutions for web and mobile."
 const url = 'https://iamteefe.netlify.app'
 const ogImage = 'https://iamteefe.netlify.app/boluwatife.png'
 
@@ -32,16 +32,28 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: personalInfo.name,
-        url: url,
-        image: ogImage,
-        jobTitle: personalInfo.role,
-        worksFor: {
-          '@type': 'Organization',
-          name: 'Freelance / Contract'
-        },
-        sameAs: personalInfo.socials.map(s => s.url).filter(u => u !== '#' && !u.startsWith('mailto'))
+        '@graph': [
+          {
+            '@type': 'Person',
+            '@id': `${url}/#person`,
+            name: personalInfo.name,
+            url: url,
+            image: ogImage,
+            jobTitle: personalInfo.role,
+            worksFor: {
+              '@type': 'Organization',
+              name: 'Freelance / Contract'
+            },
+            sameAs: personalInfo.socials.map(s => s.url).filter(u => u !== '#' && !u.startsWith('mailto'))
+          },
+          ...projects.map(project => ({
+            '@type': 'CreativeWork',
+            name: project.title,
+            description: project.description,
+            creator: { '@id': `${url}/#person` },
+            url: project.link !== '#' ? project.link : undefined
+          }))
+        ]
       })
     }
   ]

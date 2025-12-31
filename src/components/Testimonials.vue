@@ -37,7 +37,7 @@ import { Quote } from 'lucide-vue-next'
           </div>
           
           <div class="mt-8 pt-6 border-t border-border/50">
-            <h4 class="font-medium text-foreground">{{ testimonial.name }}</h4>
+            <h3 class="font-medium text-foreground">{{ testimonial.name }}</h3>
             <div class="text-sm text-muted-foreground mt-1">
               {{ testimonial.role }} @ {{ testimonial.company }}
             </div>
