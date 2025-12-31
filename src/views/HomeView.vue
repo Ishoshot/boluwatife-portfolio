@@ -4,6 +4,7 @@ import Projects from '@/components/Projects.vue'
 import Experience from '@/components/Experience.vue'
 import Skills from '@/components/Skills.vue'
 import About from '@/components/About.vue'
+import Testimonials from '@/components/Testimonials.vue'
 import { ref, onMounted } from 'vue'
 
 const isLoaded = ref(false)
@@ -23,5 +24,6 @@ onMounted(() => {
     <Experience id="experience" />
     <About id="about" />
     <Skills />
+    <Testimonials id="testimonials" />
   </div>
 </template>

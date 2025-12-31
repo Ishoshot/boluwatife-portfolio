@@ -13,14 +13,14 @@ const handleCopyEmail = () => {
 
 <template>
   <section class="max-w-3xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32">
-    <div class="space-y-8">
+    <div class="space-y-12">
       <div 
         v-motion
         :initial="{ opacity: 0, y: 20 }"
         :enter="{ opacity: 1, y: 0, transition: { duration: 800, ease: 'easeOut' } }"
         class="flex flex-wrap items-center gap-3"
       >
-        <div class="space-y-1">
+        <div class="space-y-2">
           <h4 class="text-xl font-medium text-muted-foreground font-serif italic tracking-wide">{{ hero.greeting }}</h4>
           <div class="flex items-center gap-3 flex-wrap">
             <h4 class="text-xl font-medium text-foreground tracking-tight">{{ hero.intro }}</h4>

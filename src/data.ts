@@ -41,11 +41,6 @@ export const personalInfo = {
       url: "mailto:onisuruboluwatife1@gmail.com",
       icon: Mail,
     },
-    {
-      name: "Portfolio",
-      url: "#",
-      icon: FileText,
-    },
   ],
 };
 
@@ -263,3 +258,31 @@ export const skills = {
   ],
   tools: ["Figma", "FigJam", "WordPress"],
 };
+
+export interface Testimonial {
+  name: string;
+  role: string;
+  company: string;
+  text: string;
+}
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "John Doe",
+    role: "Senior Product Manager",
+    company: "Oxgital",
+    text: "Boluwatife has an exceptional ability to translate complex requirements into intuitive designs. His attention to detail and strategic approach significantly improved our product's user experience.",
+  },
+  {
+    name: "Jane Smith",
+    role: "Engineering Lead",
+    company: "TransactX",
+    text: "Working with Boluwatife was a pleasure. He delivers high-quality work consistently and collaborates effectively with the engineering team to ensure designs are implemented perfectly.",
+  },
+  {
+    name: "Michael Johnson",
+    role: "Founder",
+    company: "BucksTrybe",
+    text: "Boluwatife played a key role in defining our MVP. His designs were not only visually stunning but also deeply rooted in user research and business goals.",
+  },
+];

@@ -10,7 +10,7 @@ import { personalInfo } from '@/data'
         <p class="text-xs text-muted-foreground tracking-wide uppercase">Designed & Built • © {{ new Date().getFullYear() }}</p>
       </div>
 
-      <div class="flex items-center gap-8">
+      <div class="flex items-center gap-7">
         <a 
           v-for="social in personalInfo.socials" 
           :key="social.name"
