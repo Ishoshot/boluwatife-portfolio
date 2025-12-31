@@ -1,4 +1,29 @@
 <script setup lang="ts">
+import { useSeoMeta, useHead } from '@unhead/vue'
+import { personalInfo } from '@/data'
+
+const title = `Portfolio Presentation | ${personalInfo.name}`
+const description = "View my detailed portfolio presentation showcasing my design process, case studies, and impact."
+const url = 'https://iamteefe.netlify.app/boluwatife'
+
+useHead({
+  title,
+  link: [
+    { rel: 'canonical', href: url }
+  ]
+})
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogUrl: url,
+  ogType: 'article',
+  twitterCard: 'summary_large_image',
+  twitterTitle: title,
+  twitterDescription: description,
+})
 </script>
 
 <template>
