@@ -1,11 +1,4 @@
-import {
-  Linkedin,
-  Mail,
-  FileText,
-  Instagram,
-  Dribbble,
-  Globe,
-} from "lucide-vue-next";
+import { Linkedin, Mail, Instagram, Dribbble, Globe } from "lucide-vue-next";
 
 export const personalInfo = {
   name: "Onisuru Boluwatife",
