@@ -12,10 +12,10 @@ import { personalInfo, skills, projects } from '@/data'
 const isLoaded = ref(false)
 
 // SEO Configuration
-const title = `${personalInfo.name} | ${personalInfo.role}`
+const title = `${personalInfo.name} | ${personalInfo.role} Portfolio`
 const description = "Full-Stack Product Designer in Lagos, Nigeria. Specializing in end-to-end product design, user research, and scalable design solutions for web and mobile."
-const url = 'https://iamteefe.netlify.app'
-const ogImage = 'https://iamteefe.netlify.app/boluwatife.png'
+const url = 'https://boluwatifeonisuru.com'
+const ogImage = 'https://boluwatifeonisuru.com/boluwatife.png'
 
 useHead({
   title,

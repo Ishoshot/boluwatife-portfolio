@@ -2,10 +2,10 @@
 import { useSeoMeta, useHead } from '@unhead/vue'
 import { personalInfo } from '@/data'
 
-const title = `Portfolio Presentation | ${personalInfo.name}`
-const description = "View my detailed portfolio presentation showcasing my design process, case studies, and impact."
-const url = 'https://iamteefe.netlify.app/boluwatife'
-const ogImage = 'https://iamteefe.netlify.app/boluwatife.png'
+const title = `Portfolio Presentation | ${personalInfo.name} - Product Designer`
+const description = "View my detailed portfolio presentation showcasing my design process, case studies, and impact. Explore end-to-end design solutions for web and mobile products."
+const url = 'https://boluwatifeonisuru.com/boluwatife'
+const ogImage = 'https://boluwatifeonisuru.com/boluwatife.png'
 
 useHead({
   title,
