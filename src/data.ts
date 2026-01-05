@@ -273,9 +273,9 @@ export const testimonials: Testimonial[] = [
     text: "Working with Boluwatife was a pleasure. He delivers high-quality work consistently and collaborates effectively with the engineering team to ensure designs are implemented perfectly.",
   },
   {
-    name: "Michael Johnson",
-    role: "Founder",
+    name: "Tope Akande",
+    role: "CEO & Co-founder",
     company: "BucksTrybe",
-    text: "Boluwatife played a key role in defining our MVP. His designs were not only visually stunning but also deeply rooted in user research and business goals.",
+    text: "Boluwatife joined Buckstrybe during an integral part of our product development at Buckstrybe and made valuable contributions from product design to design solution architecture and user research. She was active in team meetings and supported social media and content developments. She remains a great part of the Buckstrybe story as her impact is still felt in the company.",
   },
 ];
