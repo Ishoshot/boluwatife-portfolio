@@ -267,10 +267,10 @@ export const testimonials: Testimonial[] = [
     text: "Boluwatife has an exceptional ability to translate complex requirements into intuitive designs. His attention to detail and strategic approach significantly improved our product's user experience.",
   },
   {
-    name: "Jane Smith",
-    role: "Engineering Lead",
+    name: "Dada Akinlawon",
+    role: "Founder",
     company: "TransactX",
-    text: "Working with Boluwatife was a pleasure. He delivers high-quality work consistently and collaborates effectively with the engineering team to ensure designs are implemented perfectly.",
+    text: "Boluwatife makes a real impact at TransactX by consistently turning complex ideas into designs that are easy to understand and use. She brings creativity, strong attention to detail, and a collaborative spirit to the team, and continues to help us build a more intuitive and user-friendly product.",
   },
   {
     name: "Tope Akande",
