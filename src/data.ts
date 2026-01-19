@@ -261,10 +261,10 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "John Doe",
-    role: "Senior Product Manager",
+    name: "Adifagbade Pelumi",
+    role: "Design Team Lead",
     company: "Oxgital",
-    text: "Boluwatife has an exceptional ability to translate complex requirements into intuitive designs. His attention to detail and strategic approach significantly improved our product's user experience.",
+    text: "Working with Teefe was honestly a smooth experience from start to finish. She really took time to understand what I wanted, asked the right questions, and translated everything into a clean, functional design which i wanted. Communication was easy, timelines were respected, and the final result exceeded what I initially had in mind. If you’re looking for a product designer who actually listens and delivers with intention, Teefe is someone you can trust and i will definitely do more projects with her.",
   },
   {
     name: "Dada Akinlawon",
